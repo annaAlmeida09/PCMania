@@ -71,6 +71,23 @@ public class Main {
         computadores[1] = new Computador("Acer", 8800, processadorProm2, ramProm2, armazenamentoProm2, sistemaProm2 );
         computadores[2] = new Computador("Vaio", 4800, processadorProm3, ramProm3, armazenamentoProm3, sistemaProm3);
 
+        MemoriaUSB memoriaUSBprom1 = new MemoriaUSB();
+        MemoriaUSB memoriaUSBprom2 = new MemoriaUSB();
+        MemoriaUSB memoriaUSBprom3 = new MemoriaUSB();
+
+        memoriaUSBprom1.nome = "Pen-drive";
+        memoriaUSBprom2.nome = "Pen-drive";
+        memoriaUSBprom3.nome = "HD Externo";
+
+        memoriaUSBprom1.capacidade = 16;
+        memoriaUSBprom2.capacidade = 32;
+        memoriaUSBprom3.capacidade = 1;
+
+        computadores[0].addMemoriaUSB(memoriaUSBprom1);
+        computadores[1].addMemoriaUSB(memoriaUSBprom2);
+        computadores[2].addMemoriaUSB(memoriaUSBprom3);
+
+
         System.out.println("================================================================");
         System.out.println("Computadores disponiveis.");
         
