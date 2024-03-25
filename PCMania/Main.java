@@ -105,16 +105,21 @@ public class Main {
 
         
         while(resposta != 0) {
-           
             System.out.println();
             System.out.println("Inserir o numero da promocao. Caso queira finalizar a compra digite 0.");
             resposta = entrada.nextInt();
-            
-           
-            promocao = resposta-1;
-            valoresCompra[numCompras] = computadores[promocao].preco;
-            numCompras++;
-            System.out.println("Compra realizada com sucesso.");
+
+            if(resposta != 0)
+            {
+                promocao = resposta-1;
+                valoresCompra[numCompras] = computadores[promocao].preco;
+                numCompras++;
+                System.out.println("Compra realizada com sucesso.");
+            }
+            else
+            {
+                break;
+            }
         }
 
         if (numCompras == 0)
